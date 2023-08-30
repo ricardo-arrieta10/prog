@@ -1,0 +1,54 @@
+package Practica4;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Scanner;
+public class Practica4 {
+
+
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Introduce tu nombre: ");
+        String nombre = scanner.nextLine();
+
+        int añoN, mesN, diaN;
+
+        while (true) {
+            System.out.print("DÍA NACIMIENTO (1-31): ");
+            diaN = scanner.nextInt();
+
+            System.out.print("MES NACIMIENTO (1-12): ");
+            mesN = scanner.nextInt();
+
+            System.out.print("AÑO NACIMIENTO: ");
+            añoN = scanner.nextInt();
+
+            if (añoN < 1900) continue;
+
+            System.out.print("DÍA ACTUAL (1-31): ");
+            int diaA = scanner.nextInt();
+
+            System.out.print("MES ACTUAL (1-12): ");
+            int mesA = scanner.nextInt();
+
+            System.out.print("AÑO ACTUAL: ");
+            int añoA = scanner.nextInt();
+
+            LocalDate fechaNacimiento = LocalDate.of(añoN, mesN, diaN);
+            LocalDate fechaActual = LocalDate.of(añoA, mesA, diaA);
+
+            Period periodo = Period.between(fechaNacimiento, fechaActual);
+
+            int años = periodo.getYears();
+            int meses = periodo.getMonths();
+            int dias = periodo.getDays();
+
+            System.out.println();
+            System.out.println(nombre + " ha vivido:");
+            System.out.println(años + " Años");
+            System.out.println(años * 12 + meses + " Meses");
+            System.out.println(años * 365 + meses * 30 + dias + " Días aproximados");
+        }
+    }
+}
