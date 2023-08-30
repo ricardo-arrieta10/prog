@@ -1,0 +1,24 @@
+public class Practica2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		 // Crear un objeto Scanner para leer la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+
+     // Solicitar al usuario que ingrese el primer número
+        System.out.print("Ingrese el primer número: ");
+        int numero1 = scanner.nextInt();
+
+        // Solicitar al usuario que ingrese el segundo número
+        System.out.print("Ingrese el segundo número: ");
+        int numero2 = scanner.nextInt();
+
+        // Calcular la suma del doble del primer número más el cuadrado del segundo número
+        int resultado = (2 * numero1) + (numero2 * numero2);
+
+        // Mostrar el resultado
+        System.out.println("La suma del doble del primer número más el cuadrado del segundo número es: " + resultado);
+	}
+
+}
