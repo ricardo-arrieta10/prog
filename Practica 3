@@ -1,0 +1,33 @@
+public class Practica3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		 try (// Crear un objeto Scanner para leer la entrada del usuario
+		Scanner scanner = new Scanner(System.in)) {
+			// Solicitar al usuario que ingrese la cantidad en pies
+			System.out.print("Ingrese la cantidad en pies: ");
+			double pies = scanner.nextDouble();
+
+			// Convertir los pies a yardas
+			double yardas = pies / 3;
+
+			// Convertir los pies a pulgadas
+			double pulgadas = pies * 12;
+
+			// Convertir los pies a metros
+			double metros = pies * 0.3048;
+
+			// Convertir los pies a centímetros
+			double centimetros = pies * 30.48;
+
+			// Mostrar los resultados
+			System.out.println("La cantidad en yardas es: " + yardas);
+			System.out.println("La cantidad en pulgadas es: " + pulgadas);
+			System.out.println("La cantidad en metros es: " + metros);
+			System.out.println("La cantidad en centímetros es: " + centimetros);
+		}
+    
+	}
+
+}
